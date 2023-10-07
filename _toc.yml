@@ -1,0 +1,10 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: S1/basics_ph_I
+- file: S1/prama
+- file: S1/anal_I
+- file: S1/linag
