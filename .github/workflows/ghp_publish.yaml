@@ -1,0 +1,44 @@
+name: Build and Publish Jupyter Book
+
+on:
+  push:
+    branches:
+      - main # Change this to your main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Cache Python dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: python-deps-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+        restore-keys: |
+          python-deps-${{ runner.os }}-
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x # Use the version you need
+
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install jupyter-book
+      working-directory: ${{ github.workspace }}
+
+    - name: Build Jupyter Book
+      run: jupyter-book build .
+      working-directory: ${{ github.workspace }}
+
+    - name: Publish to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: _build/html
+
