@@ -1,2 +1,2 @@
-# Lineare Algebra
+## Lineare Algebra
 
