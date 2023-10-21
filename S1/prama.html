@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'S1/prama';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -288,7 +290,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -304,6 +308,63 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektorrechnung-und-koordinatengeometrie">Vektorrechnung und Koordinatengeometrie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#betrag">Betrag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basisdarstellung">Basisdarstellung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rechenoperationen">Rechenoperationen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#koordinatengeometrie">Koordinatengeometrie</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differenzierbare-relle-funktionen">Differenzierbare relle Funktionen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stetigkeit">Stetigkeit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differenzierbarkeit">Differenzierbarkeit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differenzial">Differenzial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#folgernde-satze">Folgernde Sätze</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integralrechnung">Integralrechnung</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stammfunktion">Stammfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hauptsatz-der-differenzial-und-integralrechnung">Hauptsatz der Differenzial und Integralrechnung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrationsregeln">Integrationsregeln</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrationsmethoden">Integrationsmethoden</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#partielle-integration">Partielle Integration</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#substitution">Substitution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#spezielle-substitutionen">Spezielle Substitutionen</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#flachen">Flächen</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen">Volumen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komplexe-zahlen-und-funktionen">Komplexe Zahlen und Funktionen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grundbegriffe">Grundbegriffe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarform">Polarform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bereichsangaben">Bereichsangaben</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formeln">Formeln</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wurzeln">Wurzeln</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratische-gleichungen">Quadratische Gleichungen</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kurven-im-mathbb-r-2-und-mathbb-r-3">Kurven im <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> und <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariate-funktionen">Multivariate Funktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skalar-und-vektorfelder">Skalar und Vektorfelder</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#niveaus">Niveaus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ableitungen">Ableitungen</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#von-skalarfeldern">Von Skalarfeldern</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#von-vektorfeldern">Von Vektorfeldern</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kurvenintegrale">Kurvenintegrale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-von-vektorfeldern">Potential von Vektorfeldern</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -313,8 +374,575 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="praktische-mathematik-i">
+  <section class="tex2jax_ignore mathjax_ignore" id="praktische-mathematik-i">
 <h1>Praktische Mathematik I<a class="headerlink" href="#praktische-mathematik-i" title="Permalink to this heading">#</a></h1>
+<section id="vektorrechnung-und-koordinatengeometrie">
+<h2>Vektorrechnung und Koordinatengeometrie<a class="headerlink" href="#vektorrechnung-und-koordinatengeometrie" title="Permalink to this heading">#</a></h2>
+<p>Ein Vektor ist ein Element eines Vektorraumes.
+Jeder Vektor aus <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> hat genau <span class="math notranslate nohighlight">\(n\)</span>-Elemente</p>
+<p>e.g
+$<span class="math notranslate nohighlight">\(
+    \vec{x} = \begin{pmatrix} x_1\\x_2 \end{pmatrix} \in \mathbb{R}^2
+    \vec{y} = \begin{pmatrix} y_1\\y_2\\y_3\end{pmatrix} \in \mathbb{R}^3
+\)</span>$</p>
+<section id="betrag">
+<h3>Betrag<a class="headerlink" href="#betrag" title="Permalink to this heading">#</a></h3>
+<p>Der Betrag eines Vektors wird gebildet in dem alle Komponenten Quadriert addiert werden
+und anschließend die Wurzel des Ergebnisses gebildet wird.</p>
+<div class="math notranslate nohighlight">
+\[
+    |\vec{v}| = \sqrt{\sum_v v_i^2}
+    |\vec{x} = \sqrt{x_1^2 + x_2^2}|
+    |\vec{y} = \sqrt{y_1^2 + y_2^2 + y_3^2}|
+\]</div>
+</section>
+<section id="basisdarstellung">
+<h3>Basisdarstellung<a class="headerlink" href="#basisdarstellung" title="Permalink to this heading">#</a></h3>
+<p>Jeder Vektor kann als Linearkombination von Basisvektoren dargestellt werden.
+Die bekannteste Basis ist hier die ** kartesische Basis**, welche aus den Vektoren
+<span class="math notranslate nohighlight">\(\vec{e}_x\)</span> und <span class="math notranslate nohighlight">\(\vec{e}_y\)</span> besteht.</p>
+<p>Die kartesiche Basis is also die Menge <span class="math notranslate nohighlight">\(\{\vec{e}_x, \vec{e}_y \}\)</span>, wobei
+<span class="math notranslate nohighlight">\(\vec{e}_x = \begin{pmatrix}1\\0\end{pmatrix}\)</span> und
+<span class="math notranslate nohighlight">\(\vec{e}_y = \begin{pmatrix}0\\1\end{pmatrix}\)</span> sind.</p>
+<p>Bzw. im <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>:  <span class="math notranslate nohighlight">\(\{\vec{e}_x, \vec{e}_y, \vec{e}_z\}\)</span>, wobei
+<span class="math notranslate nohighlight">\(\vec{e}_x = \begin{pmatrix}1\\0\\0\end{pmatrix}\)</span>
+<span class="math notranslate nohighlight">\(\vec{e}_y = \begin{pmatrix}0\\1\\0\end{pmatrix}\)</span> und
+<span class="math notranslate nohighlight">\(\vec{e}_z = \begin{pmatrix}0\\0\\1\end{pmatrix}\)</span> sind.</p>
+<p>Bei einer Basis ist es wichtig,
+dass alle Vektoren der Basis Linear unabhängig sind.</p>
+</section>
+<section id="rechenoperationen">
+<h3>Rechenoperationen<a class="headerlink" href="#rechenoperationen" title="Permalink to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Multiplikation mit Skalar<br />
+Hier wird jede Komponente mit dem Skalar multipliziert<br />
+i.e. <span class="math notranslate nohighlight">\(s\cdot\vec{v} = \vec{x} \rightarrow s\cdot v_i = x_i\)</span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Addition<br />
+Hier werden alle Elemente der gleichen Zeile addiert.<br />
+i.e. <span class="math notranslate nohighlight">\(\vec{x} + \vec{y} = \vec{z}\rightarrow x_i + y_i = z_i\)</span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Skalarprodukt<br />
+<span class="math notranslate nohighlight">\(\mathbb{R}^2\times \mathbb{R}^2 \rightarrow \mathbb{R}\)</span><br />
+<span class="math notranslate nohighlight">\(\vec{x} \cdot \vec{y} \in \mathbb{R}\)</span><br />
+<span class="math notranslate nohighlight">\(\vec{x} \cdot \vec{y} = x_1y_1 + x_2y_2,\qquad \vec{x}, \vec{y} \in \mathbb{R}^2\)</span><br />
+<span class="math notranslate nohighlight">\(\vec{x} \cdot \vec{y} = x_1y_1 + x_2y_2 + x_3y_3,\qquad \vec{x}, \vec{y} \in \mathbb{R}^3\)</span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Kreuzprodukt<br />
+Nur in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> definiert<br />
+<span class="math notranslate nohighlight">\(\times: \mathbb{R}^3\times\mathbb{R}^3\rightarrow\mathbb{R}^3, \vec{c} = \vec{a}\times\vec{b}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{a}\times{b} = \begin{pmatrix}
+    \begin{vmatrix}a_2&amp;b_2\\a_3&amp;b_3\end{vmatrix}\\
+    -\begin{vmatrix}a_1&amp;b_1\\a_3&amp;b_3\end{vmatrix}\\
+    \begin{vmatrix}a_2&amp;b_2\\a_3&amp;b_3\end{vmatrix}
+\end{pmatrix}\end{split}\]</div>
+</div>
+</section>
+<section id="koordinatengeometrie">
+<h3>Koordinatengeometrie<a class="headerlink" href="#koordinatengeometrie" title="Permalink to this heading">#</a></h3>
+<p><img alt="" src="../_images/Polar_to_cartesian.svg.png" />
+<img alt="" src="../_images/3D_Spherical.svg.png" /></p>
+</section>
+</section>
+<section id="differenzierbare-relle-funktionen">
+<h2>Differenzierbare relle Funktionen<a class="headerlink" href="#differenzierbare-relle-funktionen" title="Permalink to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Definition <span class="math notranslate nohighlight">\(f: A\rightarrow B\)</span>
+Injektiv: für jedes <span class="math notranslate nohighlight">\(y\in B\)</span> gibt es höchstens ein <span class="math notranslate nohighlight">\(x\in A\)</span>, welches zu <span class="math notranslate nohighlight">\(y\)</span> abbildet
+<span class="math notranslate nohighlight">\(\forall x_1, x_2 \in A\quad x_1\neq x_2 \Rightarrow f(x_1)\neq f(x_2)\)</span></p>
+<p>Surjektiv: jedes <span class="math notranslate nohighlight">\(y\in B\)</span> ist ein Bild eines <span class="math notranslate nohighlight">\(a\in A\)</span>
+<span class="math notranslate nohighlight">\(\forall y \in B \exists x\in A \text{mit} y = f(x)\)</span></p>
+<p>Bijektiv: Injektiv <span class="math notranslate nohighlight">\(\vee\)</span> Surjektiv</p>
+</div>
+<p>Eine Funktion ist Injektiv, wenn sie streng monoton wachsend oder fallend ist
+Eine Funktion ist Surjektiv, wenn <span class="math notranslate nohighlight">\(B = f(A)\)</span> gilt</p>
+<p>Eine Funktion muss Bijektiv sein damit eine Umkehrfunktion möglich ist</p>
+<section id="stetigkeit">
+<h3>Stetigkeit<a class="headerlink" href="#stetigkeit" title="Permalink to this heading">#</a></h3>
+<p>Eine Funktion <span class="math notranslate nohighlight">\(f: D\rightarrow\mathbb{R}\)</span> ist an der Stelle <span class="math notranslate nohighlight">\(x= a\in D\)</span> stetig,
+wenn gilt <span class="math notranslate nohighlight">\(lim_{x\rightarrow a-} f(x)= lim_{x\rightarrow a+} f(x) = f(a)\)</span></p>
+<p>Eine Funktion ist stetig, wenn sie an jeden Punkt stetig ist.</p>
+<p>Nicht stetige Punkte sind Sprungstellen oder Polstellen</p>
+</section>
+<section id="differenzierbarkeit">
+<h3>Differenzierbarkeit<a class="headerlink" href="#differenzierbarkeit" title="Permalink to this heading">#</a></h3>
+<p>Eine Funktion ist Differenzierbar wenn der Grenzwert von
+<span class="math notranslate nohighlight">\(lim_{\Delta x \rightarrow 0} \frac{f(x_0+\Delta x) - f(x_0}{\Delta x} = f'(x_0) = \frac{df}{dx}(x_0)\)</span>
+existiert.</p>
+<p>Die Ableitung zeigt immer die momentan Steigung am Punkt <span class="math notranslate nohighlight">\(x_0\)</span>.</p>
+</section>
+<section id="differenzial">
+<h3>Differenzial<a class="headerlink" href="#differenzial" title="Permalink to this heading">#</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><span class="math notranslate nohighlight">\(f: D\rightarrow \mathbb{R}\)</span> mit der Ableitung <span class="math notranslate nohighlight">\(f'\)</span><br />
+<span class="math notranslate nohighlight">\(dy = f'(x) dx\)</span></p>
+</div>
+</section>
+<section id="folgernde-satze">
+<h3>Folgernde Sätze<a class="headerlink" href="#folgernde-satze" title="Permalink to this heading">#</a></h3>
+<div class="admonition-ableitung-der-umkehrfunktion admonition">
+<p class="admonition-title">Ableitung der Umkehrfunktion</p>
+<p><span class="math notranslate nohighlight">\((f^{-1}(x))' = \frac{1}{f'(f^{-1}(x)}\)</span></p>
+</div>
+<div class="admonition-monotomie admonition">
+<p class="admonition-title">Monotomie</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f'(x) \geq 0~\forall x \in (a, b) \Rightarrow f\)</span> ist <strong>monoton steigend</strong> auf <span class="math notranslate nohighlight">\([a, b]\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f'(x) &gt; 0~\forall x \in (a, b) \Rightarrow f\)</span> ist <strong>streng monoton steigend</strong> auf <span class="math notranslate nohighlight">\([a, b]\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f'(x) &lt; 0~\forall x \in (a, b) \Rightarrow f\)</span> ist <strong>monoton fallend</strong> auf <span class="math notranslate nohighlight">\([a, b]\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f'(x) \leq 0\forall x \in (a, b) \Rightarrow f \)</span> ist <strong>streng monoton fallend</strong> auf <span class="math notranslate nohighlight">\([a, b]\)</span></p></li>
+</ul>
+</div>
+<div class="admonition-taylor-reihen admonition">
+<p class="admonition-title">Taylor Reihen</p>
+<div class="math notranslate nohighlight">
+\[f(x) 
+    = \sum_{k=0}^{\infty}\frac{f^{(k)}(x_0)}{k!}\cdot (x-x_0)^k
+    = \sum_{k=0}^{n} \frac{f^{(k)(x_0)}}{k!} \cdot (x-x_0)^k + R_{n+1}(x)
+\]</div>
+</div>
+<p>Taylor reihen werden verwendet um Funktionen um ein <span class="math notranslate nohighlight">\(x_0\)</span> anzunähern.
+Meistens wird nur das Taylor Polynom <span class="math notranslate nohighlight">\(n\)</span>-ten Grades gebildet
+und das Restglied weggelassen.</p>
+</section>
+</section>
+<section id="integralrechnung">
+<h2>Integralrechnung<a class="headerlink" href="#integralrechnung" title="Permalink to this heading">#</a></h2>
+<section id="stammfunktion">
+<h3>Stammfunktion<a class="headerlink" href="#stammfunktion" title="Permalink to this heading">#</a></h3>
+<p>Für eine Stammfunktion <span class="math notranslate nohighlight">\(F(x)\)</span> von <span class="math notranslate nohighlight">\(f(x)\)</span> muss gelten <span class="math notranslate nohighlight">\(F'(x) = f(x)\)</span>.</p>
+<p>Wenn <span class="math notranslate nohighlight">\(F(x)\)</span> einen Konstanten Term <span class="math notranslate nohighlight">\(C\)</span> hat fällt dieser Weg,
+deshalb muss man diesen bei unbestimmten Integralen berücksichtigenn</p>
+<p><span class="math notranslate nohighlight">\(F(x)\)</span> ist deshalb nicht eindeutig bestimmbar, ohne zusätzliche Informationen.</p>
+<p>Ein Bestimmtes Integral wird wie folgt berechnet:
+<span class="math notranslate nohighlight">\(\int_a^b f(x) dx = F(b)-F(a)\)</span>, wobei <span class="math notranslate nohighlight">\(F(x)\)</span> die Stammfunktion von<span class="math notranslate nohighlight">\(f(x)\)</span> ist.<br />
+Bei der Berechnung eines Bestimmten Integrales,
+fällt der Konstante Term weg und muss deshalb nicht berücksichtigt werden.</p>
+</section>
+<section id="hauptsatz-der-differenzial-und-integralrechnung">
+<h3>Hauptsatz der Differenzial und Integralrechnung<a class="headerlink" href="#hauptsatz-der-differenzial-und-integralrechnung" title="Permalink to this heading">#</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><span class="math notranslate nohighlight">\(\int_a^b f(x) dx = F(b)-F(a)\)</span>, wobei <span class="math notranslate nohighlight">\(F(x)\)</span> die Stammfunktion von<span class="math notranslate nohighlight">\(f(x)\)</span> ist.</p>
+</div>
+</section>
+<section id="integrationsregeln">
+<h3>Integrationsregeln<a class="headerlink" href="#integrationsregeln" title="Permalink to this heading">#</a></h3>
+<div class="admonition-summen-und-differenzenregel admonition">
+<p class="admonition-title">Summen und Differenzenregel</p>
+<p><span class="math notranslate nohighlight">\(\int f(x) \pm g(x) dx = \int f(x) dx \pm \int g(x) dx\)</span></p>
+</div>
+<div class="admonition-konstantenregel admonition">
+<p class="admonition-title">Konstantenregel</p>
+<p><span class="math notranslate nohighlight">\(\int k\cdot f(x)dx = k\cdot\int f(x) dx\)</span></p>
+</div>
+<div class="admonition-aufteilung-von-integralen admonition">
+<p class="admonition-title">Aufteilung von Integralen</p>
+<p><span class="math notranslate nohighlight">\(\int_a^b f(x) dx = \int_a^c f(x) dx + \int_c^b f(x) dx\)</span></p>
+</div>
+<div class="admonition-verleiche-von-integralen admonition">
+<p class="admonition-title">Verleiche von Integralen</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x) \leq g(x), x\in [a, b] \Rightarrow \int_a^b f(x) dx \leq \int_a^b g(x) dx\)</span></p></li>
+<li><p>Falls <span class="math notranslate nohighlight">\(|f(x)|\)</span> integrierbar <span class="math notranslate nohighlight">\(\Rightarrow |\int_a^b f(x)| \leq \int_a^b f(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|f(x)| \leq M ~\text{auf}~[a, b]\Rightarrow |\int_a^b f(x) dx| \leq M\cdot (b-a)\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="integrationsmethoden">
+<h3>Integrationsmethoden<a class="headerlink" href="#integrationsmethoden" title="Permalink to this heading">#</a></h3>
+<section id="partielle-integration">
+<h4>Partielle Integration<a class="headerlink" href="#partielle-integration" title="Permalink to this heading">#</a></h4>
+<p><span class="math notranslate nohighlight">\(\int f'(x)g(x) dx = f(x)g(x) - \int f(x)g'(x) dx\)</span></p>
+<p>Oft ist es hier hilfreich das ganze mittels einer Tabelle zu machen
+und die diagonalen mit alternierenden Vorzeichen zu verwenden.</p>
+</section>
+<section id="substitution">
+<h4>Substitution<a class="headerlink" href="#substitution" title="Permalink to this heading">#</a></h4>
+<p><span class="math notranslate nohighlight">\(\int f(z) dz = \int f(\varphi(x)) \varphi'(x) dx = F(\varphi(x)) + C\)</span></p>
+<p>In der Praxis wird ein Term  <span class="math notranslate nohighlight">\(u\)</span> bestimmt,
+welcher ersetzt wird und anschließend muss das Differenzial ersetzt werden.
+Es sollte kein Term mehr direkt von x abhängen sonder nur von <span class="math notranslate nohighlight">\(u(x)\)</span></p>
+</section>
+<section id="spezielle-substitutionen">
+<h4>Spezielle Substitutionen<a class="headerlink" href="#spezielle-substitutionen" title="Permalink to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Integral</p></th>
+<th class="head"><p>Subsitution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\int R(e^{ax}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(z = e^{ax}, a\neq 0 \)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\int R(sin(x), cos(x) dx\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(t = tan(x/2)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\int R(x, \sqrt{1+x^2}) dx\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x= sinh(t)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\int R(x, \sqrt{x^2-1}) dx\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x = cosh(t)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\int R(x, \sqrt{1-x^2})dx\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x = cos(t)\)</span> od. <span class="math notranslate nohighlight">\(x = sin(t)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="flachen">
+<h4>Flächen<a class="headerlink" href="#flachen" title="Permalink to this heading">#</a></h4>
+<p>Der Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>, der von der <span class="math notranslate nohighlight">\(x\)</span>-Achse und der Funktion <span class="math notranslate nohighlight">\(f\)</span> eingeschlossen wird,
+wird im Intervall <span class="math notranslate nohighlight">\([a, b]\)</span> wie folgt berechnet</p>
+<p><span class="math notranslate nohighlight">\(A = \int_a^b |f(x)| dx\)</span></p>
+<p>Der Flächeninhalt zwischen zwei den Graphen der Funktionen <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span>,
+wird wie folgt berechnet.
+<span class="math notranslate nohighlight">\(A = \int_{x_1}^{x_2} |f(x) -g(x)| dx\)</span>, wobei das Flächenstück
+durch die Schnittpunkte <span class="math notranslate nohighlight">\(x_1\)</span> und <span class="math notranslate nohighlight">\(x_2\)</span> begrenzt wird</p>
+</section>
+<section id="volumen">
+<h4>Volumen<a class="headerlink" href="#volumen" title="Permalink to this heading">#</a></h4>
+<p>Bei der Rotation des Graphen der Funktion <span class="math notranslate nohighlight">\(f\)</span> um die <span class="math notranslate nohighlight">\(x\)</span>-Achse
+entsteht ein Drehkörper mit dem Volumen
+<span class="math notranslate nohighlight">\(V = \pi \int_a^b y^2 dx= \pi \int_a^b (f(x))^2 dx\)</span></p>
+<p>Die Rotation um die <span class="math notranslate nohighlight">\(y\)</span>-Achse kann Analog mittels der Umkehrfunktion berechnet werden,
+entsprechend muss die Funktion im Rotierenden Bereich Bijektiv sein.</p>
+</section>
+</section>
+</section>
+<section id="komplexe-zahlen-und-funktionen">
+<h2>Komplexe Zahlen und Funktionen<a class="headerlink" href="#komplexe-zahlen-und-funktionen" title="Permalink to this heading">#</a></h2>
+<section id="grundbegriffe">
+<h3>Grundbegriffe<a class="headerlink" href="#grundbegriffe" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(\mathbb{C} =  \{z = a + ib: a,b \in \mathbb{R}\}\)</span></p>
+<p><span class="math notranslate nohighlight">\(i^2 = -1\)</span></p>
+<p>Für jede Komplexe Zahl <span class="math notranslate nohighlight">\(z\)</span> existiert eine konjugiert Komplexe Zahl <span class="math notranslate nohighlight">\(\overline{z}\)</span>,
+welche wie folgt gebildet wird.</p>
+<p><span class="math notranslate nohighlight">\(z = a + ib = r\cdot\exp(i\cdot \varphi) \Rightarrow \overline{z} = a-ib = r\cdot\exp(-i\cdot\varphi)\)</span></p>
+<p>Komplexe Zahlen haben auch einen Betrag und ein Argument.</p>
+<p>Der Betrag wird über den Pythagoras gebildet: <span class="math notranslate nohighlight">\(|z| = r = \sqrt{a^2 + b^2}\)</span>
+Das Argument wird auch über das Dreieck gebildet: <span class="math notranslate nohighlight">\(tan(\alpha) = \frac{b}{a}\)</span></p>
+<p>Beim Argument muss man aufpassen in welchen Quadranten man sich befindet,
+wenn <span class="math notranslate nohighlight">\(a &lt; 0\)</span> muss zum <span class="math notranslate nohighlight">\(\arctan\)</span> <span class="math notranslate nohighlight">\(\pi\)</span> addiert werden,
+da der Tangens keine Winkel im 2. und 3. Quadranten angeben kann.</p>
+<p>Da die Winkel meist im Intervall <span class="math notranslate nohighlight">\([0, 2Pi)\)</span> gefragt sind,
+muss man <span class="math notranslate nohighlight">\(+2\pi\)</span> rechnen, wenn man im 4. Quadranten ist.
+Dieser Punkt kann sich aber je nach Aufgabestellung ändern!</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(a=x\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(b=y\)</span></p></th>
+<th class="head"><p>Quadrant</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(arg(a+ib)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a&gt;0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(b&gt;0\)</span></p></td>
+<td><p>I</p></td>
+<td><p><span class="math notranslate nohighlight">\(arctan(\frac{b}{a})\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a&lt;0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(b&gt;0\)</span></p></td>
+<td><p>II</p></td>
+<td><p><span class="math notranslate nohighlight">\(arctan(\frac{b}{a}) + \pi\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a&lt;0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(b&lt;0\)</span></p></td>
+<td><p>III</p></td>
+<td><p><span class="math notranslate nohighlight">\(arctan(\frac{b}{a}) + \pi\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(a&gt;0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(b&lt;0\)</span></p></td>
+<td><p>IV</p></td>
+<td><p><span class="math notranslate nohighlight">\(arctan(\frac{b}{a}) (+ 2\pi)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Für die Komponentendarstellung gelten im Grunde die selben Rechenregeln.</p>
+<p>Mit den Besonderheiten:
+<span class="math notranslate nohighlight">\(z\cdot\overline{z} = |z|^2\)</span></p>
+</section>
+<section id="polarform">
+<h3>Polarform<a class="headerlink" href="#polarform" title="Permalink to this heading">#</a></h3>
+<p>Die Polarform wird mit dem Betrag <span class="math notranslate nohighlight">\(r\)</span> und dem Argument <span class="math notranslate nohighlight">\(\varphi\)</span> gebildet und sieht wie folgt aus
+<span class="math notranslate nohighlight">\(z = r\cdot \exp(i\cdot \varphi)\)</span></p>
+<p>In der Polarform gelten die Regulären exponential Rechenregeln</p>
+<p>Besondere Rechenregeln</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\exp(0) = 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\exp(z) \neq 0, \forall z \in \mathbb{C}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\overline{\exp(z)} = \exp(\overline{z})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|\exp(z)| = \exp_{\mathbb{R}}(z), \forall z \in \mathbb{C}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\exp(z)^n = \exp(n\cdot z)\)</span></p></li>
+</ul>
+</section>
+<section id="bereichsangaben">
+<h3>Bereichsangaben<a class="headerlink" href="#bereichsangaben" title="Permalink to this heading">#</a></h3>
+<p>Es können einfach Bereiche Definiert werden</p>
+<p>Bsp.
+<span class="math notranslate nohighlight">\(M = \{z \in \mathbb{C}: |z| \leq 1, \frac{\pi}{2} &lt; arg(z) \leq \pi\}\)</span></p>
+</section>
+<section id="formeln">
+<h3>Formeln<a class="headerlink" href="#formeln" title="Permalink to this heading">#</a></h3>
+<div class="admonition-formel-von-moivre admonition">
+<p class="admonition-title">Formel von Moivre</p>
+<p><span class="math notranslate nohighlight">\(z^n=  |z|^n\exp(in\varphi)\)</span></p>
+</div>
+</section>
+<section id="wurzeln">
+<h3>Wurzeln<a class="headerlink" href="#wurzeln" title="Permalink to this heading">#</a></h3>
+<p>Eine Zahl <span class="math notranslate nohighlight">\(z\)</span> ist die <span class="math notranslate nohighlight">\(n\)</span>-te komplexe Wurzel von <span class="math notranslate nohighlight">\(w\)</span>, wenn die Beziehung <span class="math notranslate nohighlight">\(z^n = w\)</span> erfüllt ist.</p>
+<p>Da, wenn das Argument <span class="math notranslate nohighlight">\(+2\pi\)</span> ist, es sich um die selbe Zahl handelt,
+können Zahlen in den Winkelbereich <span class="math notranslate nohighlight">\([0, 2\pi)\)</span> hereinfallen,
+wodurch mehrere Wurzeln entstehen.
+Somit gibt es bei der <span class="math notranslate nohighlight">\(n\)</span>-ten Wurzel n Lösungen,
+die verschiedenen Lösungen werden mit
+<span class="math notranslate nohighlight">\(z_k = \sqrt[n]{|z|} \exp\left(i \left(\frac{\phi}{n} + k\frac{2\pi}{n}\right)\right)\)</span></p>
+<p>Der Wert für <span class="math notranslate nohighlight">\(k=0\)</span> wird als Hauptwert bezeichnet.</p>
+</section>
+<section id="quadratische-gleichungen">
+<h3>Quadratische Gleichungen<a class="headerlink" href="#quadratische-gleichungen" title="Permalink to this heading">#</a></h3>
+<p>Das Polynom
+<span class="math notranslate nohighlight">\(f(z) = az^2 + bz +c \)</span>
+hat genau zwei Nullstellen</p>
+<p>Mit <span class="math notranslate nohighlight">\(p,q \in \mathbb{R}\)</span>, ergibt sich die Diskriminante <span class="math notranslate nohighlight">\(D= \left(\frac{p}{2}\right)^2-q\)</span></p>
+<p>Wenn <span class="math notranslate nohighlight">\(D&gt;0\)</span> sind die Nullstellen: <span class="math notranslate nohighlight">\(x_{1,2} = -\frac{p}{2}\pm\sqrt{\frac{p^2}{4}-q}\)</span><br />
+Wenn <span class="math notranslate nohighlight">\(D&lt;0\)</span> sind die Nullstellen: <span class="math notranslate nohighlight">\(x_{1,2} = -\frac{p}{2} \pm i\sqrt{q-\frac{p^2}{4}}\)</span></p>
+</section>
+</section>
+<section id="kurven-im-mathbb-r-2-und-mathbb-r-3">
+<h2>Kurven im <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> und <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span><a class="headerlink" href="#kurven-im-mathbb-r-2-und-mathbb-r-3" title="Permalink to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(\vec{r}(t) = \begin{pmatrix}r_1(t)\\r_2(t)\end{pmatrix}\)</span><br />
+bzw.<br />
+<span class="math notranslate nohighlight">\(\vec{r}(t) = \begin{pmatrix}r_1(t)\\r_2(t)\\r_3(t)\end{pmatrix}\)</span></p>
+<p><span class="math notranslate nohighlight">\(I = [a, b]\\qqaud \vec{r}: I\rightarrow\mathbb{R}^2,~\vec{r}(t) = \begin{pmatrix}r_1(t)\\r_2(t)\end{pmatrix}\)</span></p>
+<p><img alt="" src="../_images/CurveVisuali.png" /></p>
+<p>Eine sonderform ist die Geschlossene Kurve, diese hat die Bedingung:<br />
+<span class="math notranslate nohighlight">\(\vec{r}(a) = \vec{r}(b)\)</span></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Eine Kurve ist differenzierbar, wenn alle Komponenten <span class="math notranslate nohighlight">\(r_i(t): \mathbb{R}\rightarrow \mathbb{R}\)</span>
+differenzierbar ist.</p>
+<p>Die Ableitung des Positionsvektores ist die Ableitung der Komponenten!</p>
+<p>Eine Kurve ist glatt, wenn <span class="math notranslate nohighlight">\(\dot{\vec{r}}\)</span> nur stetige Komponenten hat.</p>
+<p>Der Tangentialvektor ist gegeben durch<br />
+<span class="math notranslate nohighlight">\(\vec{T}(t) = \frac{1}{|\dot{\vec{r}}|}\dot{\vec{r}}(t)\)</span></p>
+<p>Punkte an denen <span class="math notranslate nohighlight">\(\dot{\vec{r}}(t) = 0\)</span> gilt sind singuläre Punkte.</p>
+</div>
+<p>Die Tangente der Kurve <span class="math notranslate nohighlight">\(C = \{ \vec{r}(t): t\in [a,b]\subseteq \mathbb{R} \}\)</span>
+wird beschrieben durch <span class="math notranslate nohighlight">\( \vec{y}(s) = \vec{r}(t) + s\vec{T}(t)\)</span></p>
+<p><strong>Rechenregeln</strong></p>
+<div class="admonition-produktregel-fur-skalarprodukt admonition">
+<p class="admonition-title">Produktregel für Skalarprodukt</p>
+<p><span class="math notranslate nohighlight">\(\frac{d}{dt}(\vec{a}(t)\cdot\vec{b}(t))= \dot{\vec{a}}(t)\cdot\vec{b}(t) + {\vec{a}}(t)\cdot\dot{\vec{b}}(t)\)</span></p>
+</div>
+<div class="admonition-produktregel-fur-vektorprodukt admonition">
+<p class="admonition-title">Produktregel für Vektorprodukt</p>
+<p><span class="math notranslate nohighlight">\(\frac{d}{dt}(\vec{a}(t)\times\vec{b}(t)) = \dot{\vec{a}}(t)\cdot\vec{b}(t)+{\vec{a}}(t)\cdot\dot{\vec{b}}(t)\)</span></p>
+</div>
+<div class="admonition-bogenlange admonition">
+<p class="admonition-title">Bogenlänge</p>
+<p>Im <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> oder <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p>
+<p>Für die Kurve: <span class="math notranslate nohighlight">\(C = \{ \vec{r}(t):~t\in[a,b]\subseteq \mathbb{R}\}\)</span></p>
+<p><span class="math notranslate nohighlight">\(ds = |d\vec{r}| = |\dot{\vec{r}}| dt\)</span></p>
+<p>Die Bogenlänge wird anschließend berechnet über:<br />
+<span class="math notranslate nohighlight">\(s(t) = \int_0^t ds = \int_0^t |\dot{\vec{r}}| dt \)</span></p>
+<p>Die länge der Kurve wird dann berechnet über
+<span class="math notranslate nohighlight">\(L = \int_a^b |\dot{\vec{r}}| dt \)</span></p>
+</div>
+<p>Eine Kurve kann auch umparamterisiert werden
+und ist somit nicht eindeutig.</p>
+<p><span class="math notranslate nohighlight">\(C = \{ \vec{r}(t):~t\in[a,b]\subseteq \mathbb{R}\}\)</span></p>
+<p>Man nehme eine Bijektive Funktion <span class="math notranslate nohighlight">\(\varphi: [a,b]\rightarrow[c,d]\)</span> und die Kurve
+<span class="math notranslate nohighlight">\(\tilde{C} = \{r(\varphi(t)):~t\in[\varphi^{-1}(a), \varphi^{-1}(b)]\subseteq \mathbb{R} \}\)</span>
+diese Kurve besitzt die Gleiche Länge und ist auch sonst defakto equivalent zu <span class="math notranslate nohighlight">\(C\)</span>.
+Somit sind nicht alle Kurven eindeutig.</p>
+<p>Die eindeutige Darstellung ist mittels der Bogenlänge als Funktion.
+<span class="math notranslate nohighlight">\(s: [a,b]\rightarrow [0, L], s= \sigma(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(C = \{ \vec{r}\circ\sigma^{-1}(t): t\in[0, L]=[\sigma(a), \sigma(b)] \}\)</span></p>
+</section>
+<section id="multivariate-funktionen">
+<h2>Multivariate Funktionen<a class="headerlink" href="#multivariate-funktionen" title="Permalink to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(f: \underbrace{\overbrace{\mathbb{R}\times\mathbb{R}\times \cdots  \times\mathbb{R}}^{\mathbb{R}^n}}_{n\text{-Mal}}\rightarrow \mathbb{R},~y=f(x_1,x_2,\cdots,x_n)\)</span></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Def: Gradient von f</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla f=\begin{pmatrix}\frac{\partial f}{\partial x_1}\\\frac{\partial f}{\partial x_2}\\ \vdots \\  \frac{\partial f}{\partial x_n}\end{pmatrix}\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(\nabla f = grad f\)</span></p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Totales Differenzial</strong></p>
+<p><span class="math notranslate nohighlight">\(dy = \partial_{x_1}f dx_1 + \partial_{x_2}f dx_2 + \cdots + \partial_{x_n}f dx_n\)</span></p>
+</div>
+<div class="admonition-satz-von-schwarz admonition">
+<p class="admonition-title">Satz von Schwarz</p>
+<p><span class="math notranslate nohighlight">\(\frac{\partial}{\partial_{x_i}}\frac{\partial f}{\partial_{x_j}} = \frac{\partial}{\partial_{x_j}}\frac{\partial f}{\partial_{x_i}}\)</span></p>
+</div>
+</section>
+<section id="skalar-und-vektorfelder">
+<h2>Skalar und Vektorfelder<a class="headerlink" href="#skalar-und-vektorfelder" title="Permalink to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="math notranslate nohighlight">\(f:~\mathbb{R}^n\rightarrow\mathbb{R}\)</span></div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(y = f(\vec{x})\)</span></p>
+<p class="sd-card-text"><em>Skalar</em> feld</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(y = f(x_1, x_2, \cdots, x_n)\)</span><br />
+<span class="math notranslate nohighlight">\(\hat{=}\)</span> multiv. Funktion</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="math notranslate nohighlight">\(f:~\mathbb{R}^n\rightarrow\mathbb{R}^n\)</span></div>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\vec{y} = f(\vec{x})\)</span></p>
+<p class="sd-card-text"><em>Vektorr</em> feld</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(y = \begin{pmatrix} f_1(\vec{x})\\ f_2(\vec{x})\\ \vdots\\ f_n(\vec{x}) \end{pmatrix}\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="niveaus">
+<h3>Niveaus<a class="headerlink" href="#niveaus" title="Permalink to this heading">#</a></h3>
+<div class="admonition-niveaulinie-von-f-zum-nivau-c admonition">
+<p class="admonition-title">Niveaulinie von <span class="math notranslate nohighlight">\(f\)</span> zum nivau <span class="math notranslate nohighlight">\(c\)</span></p>
+<p>Bei einem Skalarfeld <span class="math notranslate nohighlight">\(f\)</span>, wird die Nivaulinie am niveau <span class="math notranslate nohighlight">\(c\)</span> durch alle Punkte gebildet,
+welche <span class="math notranslate nohighlight">\(c\)</span> als Ergebnis haben</p>
+<p><span class="math notranslate nohighlight">\(N_c (f) = \{ (x, y)^T \in \mathbb{R}^2:~f(x,y)=c \}\)</span></p>
+<p>Vergleichbar mit den Niveaulinien von Karten wenn <span class="math notranslate nohighlight">\(f(x, y) = z\)</span></p>
+</div>
+<p>Ebenengleichung im <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>: <span class="math notranslate nohighlight">\(ax+by+cz=c\)</span></p>
+<div class="admonition-nivauflache-von-f-zum-niveau-c admonition">
+<p class="admonition-title">Nivaufläche von <span class="math notranslate nohighlight">\(f\)</span> zum niveau <span class="math notranslate nohighlight">\(c\)</span> </p>
+<p><span class="math notranslate nohighlight">\(N_c (f) = \{ (x, y,z)\in\mathbb{R}:~ f(x, y, z) = c \}\)</span></p>
+</div>
+</section>
+<section id="ableitungen">
+<h3>Ableitungen<a class="headerlink" href="#ableitungen" title="Permalink to this heading">#</a></h3>
+<section id="von-skalarfeldern">
+<h4>Von Skalarfeldern<a class="headerlink" href="#von-skalarfeldern" title="Permalink to this heading">#</a></h4>
+<div class="admonition-richtungsableitung admonition">
+<p class="admonition-title">Richtungsableitung</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{\partial f}{\partial e}(\vec{r}) = \lim_{h\rightarrow 0}\frac{1}{h}\left(f(\vec{r}+h\vec{e} -f(\vec{r}) \right) = D_e(\vec{r}) = \nabla f(\vec{r}) \cdot\vec{e}
+\]</div>
+</div>
+<div class="admonition-tangentialebene admonition">
+<p class="admonition-title">Tangentialebene</p>
+<p><span class="math notranslate nohighlight">\(f(\vec{r}):~ \mathbb{R}^2\rightarrow \mathbb{R}\)</span><br />
+<span class="math notranslate nohighlight">\(z = T(\vec{r}) = T(x,y) = f(\vec{r_0}) + \nabla f(\vec{r_0}(\vec{r}- \vec{r_0})\)</span></p>
+</div>
+<div class="admonition-skalarfeld-ableitung admonition">
+<p class="admonition-title">Skalarfeld Ableitung</p>
+<p>Die Ableitung entlang einer Kurve, mit <span class="math notranslate nohighlight">\(t = [a,b]\)</span>, ergibt sich wie folgt:
+<span class="math notranslate nohighlight">\(\frac{d}{dt} f(\vec{r}(t)) = \frac{d}{dt}(f\circ \vec{r})(t) = \nabla f(\vec{r}(t)) \cdot \dot{\vec{r}}(t)\)</span></p>
+<p>Im grunde genommen Kettenregel</p>
+</div>
+</section>
+<section id="von-vektorfeldern">
+<h4>Von Vektorfeldern<a class="headerlink" href="#von-vektorfeldern" title="Permalink to this heading">#</a></h4>
+<div class="admonition-nabla-in-vektorfeldern admonition">
+<p class="admonition-title"><span class="math notranslate nohighlight">\(\nabla\)</span> in Vektorfeldern$</p>
+<p><span class="math notranslate nohighlight">\(f: \mathbb{R}^3\rightarrow \mathbb{R}^3,~ f(x,y,z) = \begin{pmatrix}f_1(x,y,z)\\f_2(x,y,z)\\f_3(x,y,z)\end{pmatrix}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+(\nabla \times f)(x,y,z) = rot f(x,y,z) = 
+\begin{pmatrix}
+    \partial_y f_3(x,y,z)- \partial_z f_2(x,y,z) \\
+    -(\partial_x f_3(x,y,z)- \partial_z f_1(x,y,z))\\
+    \partial_x f_2(x,y,z)- \partial_y f_1(x,y,z) 
+   \end{pmatrix}
+\end{split}\]</div>
+<p>Diese Operation wird auch als Rotation bezeichnet.<br />
+Wenn die Rotation <span class="math notranslate nohighlight">\(\vec{0}\)</span> ist, so ist das Vektorfeld <strong>Wirbelfrei</strong></p>
+<p><span class="math notranslate nohighlight">\((\nabla\cdot f)(x,y,z) = div f(x,y,z) = \partial_x f_1(x,y,z) + \partial_y f_2(x,y,z) + \partial_z f_3(x,y,z)\)</span><br />
+Diese Operation wird auch als Divergenz bezeichnet.<br />
+Wen die Divergenz <span class="math notranslate nohighlight">\(0\)</span> ist, so ist das Vektorfeld Quellenfrei.</p>
+</div>
+</section>
+</section>
+<section id="kurvenintegrale">
+<h3>Kurvenintegrale<a class="headerlink" href="#kurvenintegrale" title="Permalink to this heading">#</a></h3>
+<p>Kurvenintegrale sind Integrale über ein Skalar-/Vektorfeld entlang einer Kurve.</p>
+<div class="admonition-uber-ein-skalarfeld admonition">
+<p class="admonition-title">über ein Skalarfeld</p>
+<p><span class="math notranslate nohighlight">\(f:~\mathbb{R}^n \rightarrow \mathbb{R}, y = f(\vec{r})\)</span><br />
+<span class="math notranslate nohighlight">\(C = \{ \vec{r}(t):~t\in[a,b]\subseteq \mathbb{R} \}\)</span><br />
+\int_C fds = \int_a^b f(\vec{r}(t))|\dot{\vec{r}}| dt</p>
+</div>
+<div class="admonition-uber-ein-vektorfeld admonition">
+<p class="admonition-title">über ein Vektorfeld</p>
+<p><span class="math notranslate nohighlight">\(f:~\mathbb{R}^n \rightarrow \mathbb{R}^n, y = \vec{f}(\vec{r})\)</span><br />
+<span class="math notranslate nohighlight">\(C = \{ \vec{r}(t):~t\in[a,b]\subseteq \mathbb{R} \}\)</span><br />
+<span class="math notranslate nohighlight">\(\int_C \vec{f}\cdot d\vec{r} = \int_a^b \vec{f}(\vec{r}(t))\cdot \dot{\vec{r(t)}} dt\)</span></p>
+</div>
+<p><strong>Zusammengefügte Kurven</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>im Skalarfeld</strong></p>
+<p><span class="math notranslate nohighlight">\(f:\mathbb{R}^n\rightarrow\mathbb{R},~y=f(\vec{r})\)</span><br />
+<span class="math notranslate nohighlight">\(C_i = \{ \vec{r_i}(t):~t\in[a_i, b_1]\subseteq \mathbb{R} \}\)</span><br />
+mit der Bedingung <span class="math notranslate nohighlight">\(\vec{r_i}(b_i) = \vec{r_{i+1}}(a_{i+1})\)</span></p>
+<p><span class="math notranslate nohighlight">\(\int_{C_1\cup\cdots\cup C_n} f ds = \int_{C_1} f ds+\cdots + \int_{C_n} f ds\)</span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>im Vektorfeld</strong></p>
+<p><span class="math notranslate nohighlight">\(f:\mathbb{R}^n\rightarrow\mathbb{R}^n,~y=\vec{f}(\vec{r})\)</span><br />
+<span class="math notranslate nohighlight">\(C_i = \{ \vec{r_i}(t):~t\in[a_i, b_1]\subseteq \mathbb{R} \}\)</span><br />
+mit der Bedingung <span class="math notranslate nohighlight">\(\vec{r_i}(b_i) = \vec{[r_{i+1}}(a_{i+1})\)</span></p>
+<p><span class="math notranslate nohighlight">\(\int_{C_1\cup\cdots\cup C_n} \vec{f}\cdot d\vec{r} = \int_{C_1} \vec{f} d\vec{r}+\cdots + \int_{C_n} \vec{f} d\vec{r}\)</span></p>
+</div>
+</section>
+<section id="potential-von-vektorfeldern">
+<h3>Potential von Vektorfeldern<a class="headerlink" href="#potential-von-vektorfeldern" title="Permalink to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(\Phi:\mathbb{R}^3\rightarrow\mathbb{R}\)</span> … ist “brav”, Schönste Mathematik</p>
+<p><span class="math notranslate nohighlight">\(rot(\nabla \Phi) = \nabla \times(\nabla \Phi) = \vec{0})\)</span></p>
+</div>
+<p>Die Umkehrung:<br />
+Von einem Vektorfeld <span class="math notranslate nohighlight">\(\vec{f}(x,y,z)\)</span> zum Potential <span class="math notranslate nohighlight">\(Phi(x, y, z) kommen, wobei \)</span>\nabla \Phi = \vec{f}(x,y,z)$</p>
+<p>Wenn die Bedingung erfüllt ist, ist <span class="math notranslate nohighlight">\(rot \vec{f} = 0\)</span>,
+dies bedeutet das <span class="math notranslate nohighlight">\(\vec{f}\)</span> Wirbelfrei ist.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Hauptsatz der Kurvenintegrale</strong></p>
+<p><span class="math notranslate nohighlight">\(G\subseteq\mathbb{R}^3\)</span> ist ein einfach <em>zusammenhängendes gebiet</em>
+und <span class="math notranslate nohighlight">\(\vec{f}: G\rightarrow\mathbb{R}^3\)</span> ein Gradientenfeld (<span class="math notranslate nohighlight">\(\vec{f} = \nabla \Phi\)</span>)
+So gilt für jede Kurve <span class="math notranslate nohighlight">\(C = \{\vec{r}(t), t\in[a,b]\}\subset G\)</span></p>
+<p>So gilt: <span class="math notranslate nohighlight">\(\int_C \vec{f}\cdot d\vec{r} = \Phi(\vec{r}(b))- \Phi(\vec{r}(a))\)</span></p>
+<p>das Kurvenintegral ist somit <strong>Wegunabhängig</strong> und es ist nur der Anfangs und Endpunkt relevant</p>
+</div>
+<p>Weiters folgt, dass wenn es sich um eine geschlossene Kurve handelt (<span class="math notranslate nohighlight">\(\vec{r}(a) = \vec{r}(b)\)</span>)
+ist das Kurvenintegral automatisch 0.
+Hierfür wird wird ein besonderes Integralzeichen verwendet: <span class="math notranslate nohighlight">\(\oint_C \vec{f}\cdot d\vec{r}\)</span></p>
+<p>Um bei einem Vektorfeld im <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> festzustellen ob diese Wirbelfrei ist,
+muss eine Einbettung vorgenommen werden (<span class="math notranslate nohighlight">\(z\)</span>-Komponente <span class="math notranslate nohighlight">\(=0\)</span>)
+Daraus ergibt sich die Integratibilitätsbedingung <span class="math notranslate nohighlight">\(\partial_{x_1}f_2(x,y) = \partial_{x_2} f_1(x,y)\)</span></p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -371,6 +999,69 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektorrechnung-und-koordinatengeometrie">Vektorrechnung und Koordinatengeometrie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#betrag">Betrag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basisdarstellung">Basisdarstellung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rechenoperationen">Rechenoperationen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#koordinatengeometrie">Koordinatengeometrie</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differenzierbare-relle-funktionen">Differenzierbare relle Funktionen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stetigkeit">Stetigkeit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differenzierbarkeit">Differenzierbarkeit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differenzial">Differenzial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#folgernde-satze">Folgernde Sätze</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integralrechnung">Integralrechnung</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stammfunktion">Stammfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hauptsatz-der-differenzial-und-integralrechnung">Hauptsatz der Differenzial und Integralrechnung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrationsregeln">Integrationsregeln</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrationsmethoden">Integrationsmethoden</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#partielle-integration">Partielle Integration</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#substitution">Substitution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#spezielle-substitutionen">Spezielle Substitutionen</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#flachen">Flächen</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen">Volumen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komplexe-zahlen-und-funktionen">Komplexe Zahlen und Funktionen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grundbegriffe">Grundbegriffe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarform">Polarform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bereichsangaben">Bereichsangaben</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formeln">Formeln</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wurzeln">Wurzeln</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratische-gleichungen">Quadratische Gleichungen</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kurven-im-mathbb-r-2-und-mathbb-r-3">Kurven im <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> und <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariate-funktionen">Multivariate Funktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skalar-und-vektorfelder">Skalar und Vektorfelder</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#niveaus">Niveaus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ableitungen">Ableitungen</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#von-skalarfeldern">Von Skalarfeldern</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#von-vektorfeldern">Von Vektorfeldern</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kurvenintegrale">Kurvenintegrale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-von-vektorfeldern">Potential von Vektorfeldern</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
