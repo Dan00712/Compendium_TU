@@ -473,7 +473,8 @@ $$
 
 ```{admonition} Tangentialebene
 $f(\vec{r}):~ \mathbb{R}^2\rightarrow \mathbb{R}$  
-$z = T(\vec{r}) = T(x,y) = f(\vec{r_0}) + \nabla f(\vec{r_0}(\vec{r}- \vec{r_0})$
+$z = T(\vec{r}) = T(x,y) = f(\vec{r_0}) + \nabla f(\vec{r_0}(\vec{r}- \vec{r_0}) 
+    \left( r- r_0 \right)$
 ```
 
 ```{admonition} Skalarfeld Ableitung
