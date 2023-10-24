@@ -512,7 +512,7 @@ Kurvenintegrale sind Integrale über ein Skalar-/Vektorfeld entlang einer Kurve.
 ```{admonition} über ein Skalarfeld
 $f:~\mathbb{R}^n \rightarrow \mathbb{R}, y = f(\vec{r})$  
 $C = \{ \vec{r}(t):~t\in[a,b]\subseteq \mathbb{R} \}$  
-\int_C fds = \int_a^b f(\vec{r}(t))|\dot{\vec{r}}| dt  
+$\int_C fds = \int_a^b f(\vec{r}(t))|\dot{\vec{r}}| dt$  
 ```
 
 ```{admonition} über ein Vektorfeld
