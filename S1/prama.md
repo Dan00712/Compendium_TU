@@ -368,7 +368,7 @@ $\frac{d}{dt}(\vec{a}(t)\cdot\vec{b}(t))= \dot{\vec{a}}(t)\cdot\vec{b}(t) + {\ve
 ```
 
 ```{admonition} Produktregel für Vektorprodukt
-$\frac{d}{dt}(\vec{a}(t)\times\vec{b}(t)) = \dot{\vec{a}}(t)\cdot\vec{b}(t)+{\vec{a}}(t)\cdot\dot{\vec{b}}(t)$
+$\frac{d}{dt}(\vec{a}(t)\times\vec{b}(t)) = \dot{\vec{a}}(t)\times\vec{b}(t)+{\vec{a}}(t)\times\dot{\vec{b}}(t)$
 ```
 
 ```{admonition} Bogenlänge
