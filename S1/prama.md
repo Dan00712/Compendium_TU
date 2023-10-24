@@ -368,7 +368,7 @@ $\frac{d}{dt}(\vec{a}(t)\cdot\vec{b}(t))= \dot{\vec{a}}(t)\cdot\vec{b}(t) + {\ve
 ```
 
 ```{admonition} Produktregel für Vektorprodukt
-$\frac{d}{dt}(\vec{a}(t)\times\vec{b}(t)) = \dot{\vec{a}}(t)\cdot\vec{b}(t)+{\vec{a}}(t)\cdot\dot{\vec{b}}(t)$
+$\frac{d}{dt}(\vec{a}(t)\times\vec{b}(t)) = \dot{\vec{a}}(t)\times\vec{b}(t)+{\vec{a}}(t)\times\dot{\vec{b}}(t)$
 ```
 
 ```{admonition} Bogenlänge
@@ -473,7 +473,8 @@ $$
 
 ```{admonition} Tangentialebene
 $f(\vec{r}):~ \mathbb{R}^2\rightarrow \mathbb{R}$  
-$z = T(\vec{r}) = T(x,y) = f(\vec{r_0}) + \nabla f(\vec{r_0}(\vec{r}- \vec{r_0})$
+$z = T(\vec{r}) = T(x,y) = f(\vec{r_0}) + \nabla f(\vec{r_0}(\vec{r}- \vec{r_0}) 
+    \left( r- r_0 \right)$
 ```
 
 ```{admonition} Skalarfeld Ableitung
@@ -511,7 +512,7 @@ Kurvenintegrale sind Integrale über ein Skalar-/Vektorfeld entlang einer Kurve.
 ```{admonition} über ein Skalarfeld
 $f:~\mathbb{R}^n \rightarrow \mathbb{R}, y = f(\vec{r})$  
 $C = \{ \vec{r}(t):~t\in[a,b]\subseteq \mathbb{R} \}$  
-\int_C fds = \int_a^b f(\vec{r}(t))|\dot{\vec{r}}| dt  
+$\int_C fds = \int_a^b f(\vec{r}(t))|\dot{\vec{r}}| dt$  
 ```
 
 ```{admonition} über ein Vektorfeld
@@ -551,7 +552,7 @@ $rot(\nabla \Phi) = \nabla \times(\nabla \Phi) = \vec{0})$
 ```
 
 Die Umkehrung:  
-Von einem Vektorfeld $\vec{f}(x,y,z)$ zum Potential $Phi(x, y, z) kommen, wobei $\nabla \Phi = \vec{f}(x,y,z)$
+Von einem Vektorfeld $\vec{f}(x,y,z)$ zum Potential $\Phi(x, y, z) kommen, wobei $\nabla \Phi = \vec{f}(x,y,z)$
 
 Wenn die Bedingung erfüllt ist, ist $rot \vec{f} = 0$, 
     dies bedeutet das $\vec{f}$ Wirbelfrei ist.
