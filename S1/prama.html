@@ -750,7 +750,7 @@ wird beschrieben durch <span class="math notranslate nohighlight">\( \vec{y}(s) 
 </div>
 <div class="admonition-produktregel-fur-vektorprodukt admonition">
 <p class="admonition-title">Produktregel für Vektorprodukt</p>
-<p><span class="math notranslate nohighlight">\(\frac{d}{dt}(\vec{a}(t)\times\vec{b}(t)) = \dot{\vec{a}}(t)\cdot\vec{b}(t)+{\vec{a}}(t)\cdot\dot{\vec{b}}(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{d}{dt}(\vec{a}(t)\times\vec{b}(t)) = \dot{\vec{a}}(t)\times\vec{b}(t)+{\vec{a}}(t)\times\dot{\vec{b}}(t)\)</span></p>
 </div>
 <div class="admonition-bogenlange admonition">
 <p class="admonition-title">Bogenlänge</p>
@@ -851,7 +851,8 @@ welche <span class="math notranslate nohighlight">\(c\)</span> als Ergebnis habe
 <div class="admonition-tangentialebene admonition">
 <p class="admonition-title">Tangentialebene</p>
 <p><span class="math notranslate nohighlight">\(f(\vec{r}):~ \mathbb{R}^2\rightarrow \mathbb{R}\)</span><br />
-<span class="math notranslate nohighlight">\(z = T(\vec{r}) = T(x,y) = f(\vec{r_0}) + \nabla f(\vec{r_0}(\vec{r}- \vec{r_0})\)</span></p>
+<span class="math notranslate nohighlight">\(z = T(\vec{r}) = T(x,y) = f(\vec{r_0}) + \nabla f(\vec{r_0}(\vec{r}- \vec{r_0}) 
+    \left( r- r_0 \right)\)</span></p>
 </div>
 <div class="admonition-skalarfeld-ableitung admonition">
 <p class="admonition-title">Skalarfeld Ableitung</p>
@@ -889,7 +890,7 @@ Wen die Divergenz <span class="math notranslate nohighlight">\(0\)</span> ist, s
 <p class="admonition-title">über ein Skalarfeld</p>
 <p><span class="math notranslate nohighlight">\(f:~\mathbb{R}^n \rightarrow \mathbb{R}, y = f(\vec{r})\)</span><br />
 <span class="math notranslate nohighlight">\(C = \{ \vec{r}(t):~t\in[a,b]\subseteq \mathbb{R} \}\)</span><br />
-\int_C fds = \int_a^b f(\vec{r}(t))|\dot{\vec{r}}| dt</p>
+<span class="math notranslate nohighlight">\(\int_C fds = \int_a^b f(\vec{r}(t))|\dot{\vec{r}}| dt\)</span></p>
 </div>
 <div class="admonition-uber-ein-vektorfeld admonition">
 <p class="admonition-title">über ein Vektorfeld</p>
@@ -923,7 +924,7 @@ mit der Bedingung <span class="math notranslate nohighlight">\(\vec{r_i}(b_i) = 
 <p><span class="math notranslate nohighlight">\(rot(\nabla \Phi) = \nabla \times(\nabla \Phi) = \vec{0})\)</span></p>
 </div>
 <p>Die Umkehrung:<br />
-Von einem Vektorfeld <span class="math notranslate nohighlight">\(\vec{f}(x,y,z)\)</span> zum Potential <span class="math notranslate nohighlight">\(Phi(x, y, z) kommen, wobei \)</span>\nabla \Phi = \vec{f}(x,y,z)$</p>
+Von einem Vektorfeld <span class="math notranslate nohighlight">\(\vec{f}(x,y,z)\)</span> zum Potential <span class="math notranslate nohighlight">\(\Phi(x, y, z) kommen, wobei \)</span>\nabla \Phi = \vec{f}(x,y,z)$</p>
 <p>Wenn die Bedingung erfüllt ist, ist <span class="math notranslate nohighlight">\(rot \vec{f} = 0\)</span>,
 dies bedeutet das <span class="math notranslate nohighlight">\(\vec{f}\)</span> Wirbelfrei ist.</p>
 <div class="admonition important">
