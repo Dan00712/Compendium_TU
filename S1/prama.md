@@ -552,7 +552,7 @@ $rot(\nabla \Phi) = \nabla \times(\nabla \Phi) = \vec{0})$
 ```
 
 Die Umkehrung:  
-Von einem Vektorfeld $\vec{f}(x,y,z)$ zum Potential $Phi(x, y, z) kommen, wobei $\nabla \Phi = \vec{f}(x,y,z)$
+Von einem Vektorfeld $\vec{f}(x,y,z)$ zum Potential $\Phi(x, y, z) kommen, wobei $\nabla \Phi = \vec{f}(x,y,z)$
 
 Wenn die Bedingung erfüllt ist, ist $rot \vec{f} = 0$, 
     dies bedeutet das $\vec{f}$ Wirbelfrei ist.
