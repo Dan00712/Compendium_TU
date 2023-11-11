@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'S1/anal_I';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -142,6 +144,7 @@ const thebe_selector_output = ".output, .cell_output"
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -288,7 +291,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -304,6 +309,20 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sums">Sums</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abbildungen">Abbildungen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengen">Mengen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reelle-zahlen">Reelle Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konvergenzwert">Konvergenzwert</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konvergenz">Konvergenz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionen">Funktionen</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -313,8 +332,97 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="analysis-i">
+  <section class="tex2jax_ignore mathjax_ignore" id="analysis-i">
 <h1>Analysis I<a class="headerlink" href="#analysis-i" title="Permalink to this heading">#</a></h1>
+<p><span class="math notranslate nohighlight">\({n\choose k} = \frac{n!}{k!(n-k)!}\)</span><br />
+<span class="math notranslate nohighlight">\({(n+1)\choose k} = {n \choose (k-1)} + {n\choose k}\)</span><br />
+<span class="math notranslate nohighlight">\({n\choose n}={n\choose 0} = 1\)</span></p>
+<p><span class="math notranslate nohighlight">\(\lim_{n\rightarrow \infty} \left(1+\frac{1}{n}\right)^n = \sum_{k=0}^{\infty}\frac{1}{k!} = e\)</span>
+<span class="math notranslate nohighlight">\(\lim_{n\rightarrow \infty} \left(1+\frac{x}{n}\right)^n = \sum_{k=0}^{infty}\frac{x^k}{k!} = e^x\)</span></p>
+<section id="sums">
+<h2>Sums<a class="headerlink" href="#sums" title="Permalink to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(\sum_{k=1}^{n}k=\frac{1}{2}n(n+1)\)</span><br />
+<span class="math notranslate nohighlight">\(\sum_{k=0}^{n}q^k = \frac{q^{n+1}-1}{1-q}\)</span><br />
+<span class="math notranslate nohighlight">\(\sum_{k=0}^{n}{{n}\choose{k}}x^{k} y^{n-k} = (x+y)^k\)</span></p>
+</section>
+<section id="abbildungen">
+<h2>Abbildungen<a class="headerlink" href="#abbildungen" title="Permalink to this heading">#</a></h2>
+<p>Injektiv: <span class="math notranslate nohighlight">\((a_n \neq a_m\Rightarrow f(a_n)\neq f(a_m))\Rightarrow (f(a_n) = f(a_m) \Rightarrow a_n = a_m)\)</span><br />
+Es existiert für jedes Element im Bildbereich <em>höchstens</em> 1 Element im Definitionsbereich<br />
+Keine Elemente im Bildbereich werden doppelt getroffen</p>
+<p>Surjektiv: <span class="math notranslate nohighlight">\(\forall b\in B: \exists a\in A \text{with} b = f(a), f: A\rightarrow B\)</span><br />
+Es existiert für jedes Element im Bildbereich mindestens 1 Element im Definitionsbereich<br />
+Alle Elemente im Bildbereich werden getroffen</p>
+<p>Bijektiv: Injektiv <span class="math notranslate nohighlight">\(\wedge\)</span> Surjektiv</p>
+<p>Bijektiv Vorraussetzung für Umkehrfunktion</p>
+<p><span class="math notranslate nohighlight">\((f\circ g)^{-1} = g^{-1} \circ f^{-1}\)</span></p>
+</section>
+<section id="mengen">
+<h2>Mengen<a class="headerlink" href="#mengen" title="Permalink to this heading">#</a></h2>
+<p>Mächtigkeit einer Menge ist die Anzahl der Elemente <span class="math notranslate nohighlight">\(|A|\)</span></p>
+<p>Gleiche mächtigkeit zu <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> <em>abzählbar unendlich</em> (<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>)</p>
+</section>
+<section id="reelle-zahlen">
+<h2>Reelle Zahlen<a class="headerlink" href="#reelle-zahlen" title="Permalink to this heading">#</a></h2>
+<p>Alle Intervalle in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> sind gleich mächtig</p>
+<p><span class="math notranslate nohighlight">\(||x| - |y|| \leq |x\pm y| \leq |x| + |y|\)</span></p>
+<p>Supremum: kleinste obere Schranke von einer Menge
+Infinum: größte untere Schranke von einer Menge
+sind nicht in der Menge enthalten, sind ansonsten Max und Min</p>
+<p><span class="math notranslate nohighlight">\(\epsilon\)</span>-Umgebung: <span class="math notranslate nohighlight">\(K_{\epsilon}(x) = (x-\epsilon, x+\epsilon)=\{ y\in \mathbb{R}: |y-x|&lt;\epsilon \}\)</span></p>
+<p>x ist</p>
+<ul class="simple">
+<li><p>innerer Punkt von <span class="math notranslate nohighlight">\(A\)</span>, wenn gilt<span class="math notranslate nohighlight">\(\exists \epsilon: K_{\epsilon}(x) = A\)</span></p></li>
+<li><p>äußerer Punkt von <span class="math notranslate nohighlight">\(A\)</span>, wenn kein Innerer Punkt</p></li>
+<li><p>Randpunkt, wenn <span class="math notranslate nohighlight">\(A=[a, b]\)</span> und <span class="math notranslate nohighlight">\(x=a \vee x=b\)</span></p></li>
+<li><p>Häufungspunkt, wenn in einem <span class="math notranslate nohighlight">\(\epsilon\)</span>-Gebiet unendlich viele Werte sind</p></li>
+</ul>
+</section>
+<section id="konvergenzwert">
+<h2>Konvergenzwert<a class="headerlink" href="#konvergenzwert" title="Permalink to this heading">#</a></h2>
+<p>Reihe: <span class="math notranslate nohighlight">\(a=\lim_{n\rightarrow\infty} a_n = \lim_{n\rightarrow\infty}a_{n\pm 1}\)</span><br />
+Geometrische Reihe: <span class="math notranslate nohighlight">\(\sum_{k=0}^{\infty}r^k = \frac{1}{1-r}:~0&lt;r&lt;1\)</span></p>
+<p>Quotientenkriterium: <span class="math notranslate nohighlight">\(p = \left|\frac{a_{k+1}}{a_k}\right|\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p \leq q &lt; 1\)</span>: Absolut konvergent</p></li>
+<li><p><span class="math notranslate nohighlight">\(p \geq 1\)</span>: divergent</p></li>
+<li><p><span class="math notranslate nohighlight">\(p \leq 1 \wedge \not \leq q &lt; 1\)</span>: keine allgemeine Aussage</p></li>
+</ul>
+<p>Quotientenkriterium 2: <span class="math notranslate nohighlight">\(r := \lim{k\rightarrow \infty \left| \frac{a_{k+1}}{a_l}\right|}\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(r &lt; 1\)</span>: absolut konvergent</p></li>
+<li><p><span class="math notranslate nohighlight">\(r &gt; 1\)</span>: divergent</p></li>
+<li><p><span class="math notranslate nohighlight">\(r = 1\)</span>: keine allgemeine Aussage</p></li>
+</ul>
+<p>Wurzelkriterium: <span class="math notranslate nohighlight">\(r:= \lim_{k\rightarrow \infty}\sqrt[k]{|a_k|}\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(r &lt; 1\)</span>: absolut konvergent</p></li>
+<li><p><span class="math notranslate nohighlight">\(r &gt; 1\)</span>: divergent</p></li>
+<li><p><span class="math notranslate nohighlight">\(r = 1\)</span>: keine Aussage</p></li>
+</ul>
+</section>
+<section id="konvergenz">
+<h2>Konvergenz<a class="headerlink" href="#konvergenz" title="Permalink to this heading">#</a></h2>
+<p>Grenzwert eindeutig bestimmbar<br />
+Cauchyfolge: <span class="math notranslate nohighlight">\(\forall \epsilon&gt;0 \exists N=N(\epsilon)\forall n,m \in \mathbb{N}\wedge n,m \geq N(\epsilon) |a_m-a_n|&lt;\epsilon\)</span></p>
+<p>Seien <span class="math notranslate nohighlight">\(a_n\)</span> und <span class="math notranslate nohighlight">\(b_n\)</span> konvergente Folgen, mit den Werten <span class="math notranslate nohighlight">\(a\)</span> und <span class="math notranslate nohighlight">\(b\)</span>,
+ist auch <span class="math notranslate nohighlight">\(c_n = a_n\pm b_n\)</span> konvergent,
+mit den Wert <span class="math notranslate nohighlight">\(c = a \pm b\)</span><br />
+gleiches mit <span class="math notranslate nohighlight">\(a_n/b_n
+und bei multiplikation mit skalar\)</span></p>
+<p>Teilfolge: Folge <span class="math notranslate nohighlight">\(a_n\)</span> mit weiterer folge <span class="math notranslate nohighlight">\(0&lt;n_1&lt;n_2&lt;...\)</span> dann ist a_{n_{k}} eine Teilfolge</p>
+<p>Konvergiert eine Folge konvergiert auch jede Teilfolge</p>
+<p>Jede Folge hat eine Konvergente Teilfolge</p>
+<p>Monoton wachsend <span class="math notranslate nohighlight">\(\wedge\)</span> von oben Beschränkt <span class="math notranslate nohighlight">\(\Rightarrow\)</span> konvergent
+Monoton fallend <span class="math notranslate nohighlight">\(\wedge\)</span> nach unten Beschränkt <span class="math notranslate nohighlight">\(\Rightarrow\)</span> konvergent</p>
+<p>absolut Konvergent wenn gilt <span class="math notranslate nohighlight">\(\sum_{k=0}^{\infty}|a_k| =a\)</span></p>
+<p>Umordnung kann konvergenz verändern: unbedingt Konvergent: jede Umordnung konvergent zum selben Wert sonst bedingt<br />
+unbedingt konvergent <span class="math notranslate nohighlight">\(\equiv\)</span> absolut konvergent</p>
+<p><span class="math notranslate nohighlight">\(\sum_{k=0}^{\infty} a_k\cdot \sum_{k=0}^{\infty} b_k = \sum_{k=0}^{\infty} \sum_{l=0}^{k}a_{k-l}\cdot b_l\)</span></p>
+</section>
+<section id="funktionen">
+<h2>Funktionen<a class="headerlink" href="#funktionen" title="Permalink to this heading">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -372,6 +480,26 @@ document.write(`
             
             
               
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sums">Sums</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abbildungen">Abbildungen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengen">Mengen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reelle-zahlen">Reelle Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konvergenzwert">Konvergenzwert</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konvergenz">Konvergenz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionen">Funktionen</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -414,8 +542,8 @@ By Daniel Steinmaurer
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
   <footer class="bd-footer">
   </footer>
