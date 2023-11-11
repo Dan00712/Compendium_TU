@@ -576,3 +576,146 @@ Hierfür wird wird ein besonderes Integralzeichen verwendet: $\oint_C \vec{f}\cd
 Um bei einem Vektorfeld im $\mathbb{R}^2$ festzustellen ob diese Wirbelfrei ist,
     muss eine Einbettung vorgenommen werden ($z$-Komponente $=0$)
 Daraus ergibt sich die Integratibilitätsbedingung $\partial_{x_1}f_2(x,y) = \partial_{x_2} f_1(x,y)$
+
+## Bereichsintegrale
+
+$g(x) = \int_{a(x)}^{b(x)} f(x,y) dy$  
+
+Regel von Leibnitz:  
+$g'(x) = \frac{dg(x)}{dx} = \int_{a(x)}^{b(x)} \partial_x f(x,y) dy + b'(x) f(x, b(x)) - a'(x) f(x, a(x))$
+
+### Flächenintegrale
+
+$$
+    f: \mathbb{R}\rightarrow \mathbb{R}\\
+    \int_B f(x,y) dA = \int_{x=a}^{x=b}\int_{y=d(x)}^{y(x)} f(x,y) dy dx = 
+        \int_{y=c}^{y=d}\int_{x=a(x)}^{x=b(x)} f(x,y) dy dx
+$$
+
+### Volumensintegrale
+
+gleich  Flächenintegrale nur in $\mathbb{R}^3$
+
+### Koordinatentransformation  
+
+$$
+u = u(x,y),\\
+v = v(x,y)\\
+$$
+
+bzw.
+
+$$
+x = x(u, v),\\
+y = y(u, v)
+$$
+
+und mit
+$$
+J = \frac{\partial(x,y)}{\partial(u, v)} = 
+    \begin{pmatrix} 
+        \partial_u x & \partial_v x \\
+        \partial_u y & \partial_v y
+    \end{pmatrix}
+$$
+
+gilt:  
+
+$$
+\int_B f(x,y) d(x,y) = \int_{B^*} f(x(u,v), y(u,v)) det J d(u, v)
+$$
+
+Jakobi-Matrix Determinanten für Koordinatensysteme:  
+| Transformation                          | $\vec{r} = \vec{T}(u, v, (w))$                                                   | Jakobi-Determinante       |
+|-----------------------------------------|----------------------------------------------------------------------------------|---------------------------|
+| Polarkoordinaten $(r, \varphi)$         | $x= r \cos(\varphi)~~y=r\sin(\varphi)$                                           | $det J = r$               |
+| Zylinderkoordinaten $(r, \varphi, z)$   | $x= r \cos(\varphi)~~y=r\sin(\varphi)~~z=z$                                      | $det J = r$               |
+| Kugelkoordinaten $(r, \varphi, \theta)$ | $x= r \cos(\varphi)\sin(\theta)~~y=r\sin(\varphi)\sin(\theta)~~z= r\cos(\theta)$ | $det J = r^2 sin(\theta)$ |
+
+
+
+## Differenzialgleichungen
+
+
+### DGL-Grundlagen  
+
+*explizite* Differenzialgleichung  
+$\dot{y} = f(t, y)$  
+
+*implizite* Differenzialgleichung  
+$F(t,y, \dot{y}) = 0$
+
+DGL 1. Ordnung weil max. Ableitung erster Ordnung  
+
+Eine Funktion ist eine Lösung der DGL, wenn die Gleichung erfüllt ist,
+    die Funktion muss dabei nicht eindeutig sein.  
+Die Funktion wird eindeutig, 
+    wenn Punkte gegeben sind (Anfangswertproblem, Randwertproblem)
+
+Eine DGL ist autonom, wenn $f$ bzw. $F$ nur von $y$ bzw. von $y$ und $\dot{y}$ abhängt
+
+### Lineare DGL 1. Ordnung  
+
+$\dot{y} + ay = g(t)$  
+
+Wenn $g(t)=0$  gilt so ist die DGL homogen, ansonsten Inhomogen  
+Wenn a nicht von $t$ abhängt dann handelt es sich um eine DGL 1. Ordnung mit konstanten Koeffizienten
+    (ansonsten variable Koeffizienten)  
+
+Es gibt eine homogene Lösung, welche die Homogene DGL erfüllt 
+und eine partikuläre Lösung welche die Inhomogene DGL löst
+
+Die Gesammtlösung ist damit: $y(t) = y_h(t) + y_p(t)$  
+
+Für die Partikuläre Lösung, wird die Methode der Variation der Konstanten verwendet  
+
+### Seperable DGL  
+
+ist in der Form:  
+$y'(x) = f(x)g(y)$  
+
+Hier wird die DGL mittels Trennung der Variablen gelöst (bedeutend $\frac{dy}{dx}$ wird wie ein Bruch behandelt).  
+
+
+### DGL 2. Ordnung  
+
+
+$a_2(t)\ddot{y} + a_1(t) \dot{y} + a_0(t) y= b(t)$  
+
+Lösung gegeben durch  
+$y(t) = y_h(t) + y_p(t) = c_1 y_1(t) + c_y y_2(t) + y_p(t)$  
+
+$y_h(t) = c_1 y_1(t) + c_2 y_2(t)$  ist wieder Lösung der Homogenen DGL 
+und $y_p$ die Lösung der Inhomogenen DGL  
+
+Fast immer konstante Koeffizienten  
+Ansatz für Lösung von $y_h$  
+$y(t) = e^{\lambda t}$  
+
+dadurch ergibt sich das charakteristische Polynom  $p(\lambda) = \lambda^2 + p\lambda + q$  
+
+Wenn dieses Polynom zwei Lösungen hat, so gilt $y_h(t) = C_1 e^{\lambda_1 t} + C_2 e^{\lambda_2 t}$  
+Wenn das Polynom nur eine Lösung ($\lambda$) hat, so gilt $y_h(t) = C_1 t e^{\lambda t} + C_2 e^{\lambda t}$  
+
+
+Im komplexen Fall (Schwingungsfall) sieht die DGL so aus  
+$$z = \alpha \pm i\beta \\
+    y(t) = C_1 e^{z t} + C_2 e^{z t}= C_1 e^{\alpha t} (\cos(\beta t) + i\sin(\beta t)) 
+        + C_2 e^{\alpha t} (\cos(\beta t) - i\sin(\beta t))
+$$
+
+Dies führt zur Rellen Darstellung ($C_1, C_2$- anders)  
+
+$$
+y(t) = e^{\alpha t} (C_1 \cos(\beta t) + C_2 \sin(\beta t))
+$$ 
+
+Für die Partikuläre Lösung wird eine Ansatztabelle verwende 
+| Störfunktion                                    | $y_p$-Ansatz                                      |
+|-------------------------------------------------|---------------------------------------------------|
+| $f(t) = b$                                      | $y_p = a$                                         |
+| $f(t) = be^{\mu t}$                             | $y_p(t) = a e^{\mu t}$                            |
+| $f(t) = b_0 + b_1 t + \dots b_m t^m$            | $y_p(t) = a_0 + a_1 t + \dots a_m t^m$            |
+| $f(t) = b_1 \sin(kt) + b_2 \cos(kt)$            | $y_p(t) = a_1 \sin(kt) + a_2 \cos(kt)$            |
+| $f(t) = e^{\mu t}(b_1 \sin(kt) + b_2 \cos(kt))$ | $y_p(t) = e^{\mu t}(a_1 \sin(kt) + a_2 \cos(kt))$ |
+| $f(t) = e^{\mu t} p(t)$...Grad(p) = m           | $y_p(t) = e^{\mu t} q(t)$...Grad(q) = m           |
